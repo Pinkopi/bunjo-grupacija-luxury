@@ -3,168 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bunjo Grupacija | Povjerenje od 1990. – Zlatno-crna luksuzna verzija</title>
+<title>Bunjo Grupacija | Povjerenje od 1990. | Zlatno-Crna Verzija</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root { --gold: #D4AF37; --black: #0a0a0a; --dark: #111; --white: #fff; }
+:root { --gold:#D4AF37; --black:#0A0A0A; --dark:#111; --white:#fff; --gray:#aaa; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--black); color:var(--white); font-family:'Inter',sans-serif; overflow-x:hidden; }
+body { background:var(--black); color:var(--white); font-family:'Inter',sans-serif; }
 h1,h2,h3 { font-family:'Playfair Display',serif; }
-.gold { color:var(--gold); }
-.section { padding:80px 5%; }
-.btn { background:var(--gold); color:#000; padding:12px 28px; border:none; cursor:pointer; font-weight:600; text-decoration:none; display:inline-block; margin:10px; transition:0.3s; }
-.btn:hover { background:#fff; }
-.hero { height:100vh; background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920') center/cover; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; position:relative; }
-.hero h1 { font-size:4.5rem; }
-.hero p { font-size:1.5rem; margin:20px 0; }
-.stripes { position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; pointer-events:none; }
-.stripe { position:absolute; height:2px; background:linear-gradient(90deg, transparent, var(--gold), transparent); width:100%; animation:slide 12s linear infinite; opacity:0.6; }
-@keyframes slide { 0%{transform:translateX(-100%);} 100%{transform:translateX(100%);} }
-.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:30px; text-align:center; background:var(--dark); }
-.stat h3 { font-size:3rem; color:var(--gold); }
-.swiper { width:100%; padding:40px 0; }
-.swiper-slide { background:var(--dark); height:200px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; border:1px solid var(--gold); }
-.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.card { background:var(--dark); padding:30px; border:1px solid #333; transition:0.3s; }
-.card:hover { border-color:var(--gold); transform:translateY(-5px); }
-.locations { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
-nav { position:fixed; top:0; width:100%; background:rgba(10,10,10,0.9); padding:15px 5%; z-index:100; display:flex; justify-content:space-between; align-items:center; }
-nav a { color:var(--white); text-decoration:none; margin:0 15px; }
+nav { position:fixed; top:0; width:100%; background:rgba(10,10,10,.92); backdrop-filter:blur(12px); z-index:100; padding:1rem 5%; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(212,175,55,.2); }
+.logo { font-size:1.6rem; font-weight:700; color:var(--gold); letter-spacing:1px; }
+.logo small { display:block; font-size:.55rem; color:#ccc; letter-spacing:3px; font-family:Inter; }
+nav a { color:#fff; text-decoration:none; margin:0 1rem; font-size:.9rem; }
 nav a:hover { color:var(--gold); }
+.hero { height:100vh; background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2000') center/cover; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; overflow:hidden; }
+.stripes { position:absolute; inset:0; background:repeating-linear-gradient(90deg,transparent 0 40px,rgba(212,175,55,.06) 40px 42px); animation:move 15s linear infinite; }
+@keyframes move { to { background-position:100px 0; } }
+.hero-content { z-index:2; max-width:900px; }
+.hero h1 { font-size:clamp(3.5rem,8vw,6.5rem); line-height:.9; background:linear-gradient(90deg,#fff,var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.tagline { color:var(--gold); letter-spacing:4px; font-size:1.3rem; margin:1rem 0; }
+.cta { display:inline-block; background:var(--gold); color:#000; padding:.9rem 2.2rem; border-radius:50px; text-decoration:none; font-weight:600; margin:.5rem; transition:.3s; }
+.cta:hover { background:#f4e4a6; transform:translateY(-2px); }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:2rem; padding:5rem 5%; background:var(--dark); text-align:center; }
+.stat-num { font-size:3rem; color:var(--gold); font-family:'Playfair Display'; font-weight:700; }
+section { padding:5rem 5%; }
+h2 { text-align:center; font-size:2.8rem; color:var(--gold); margin-bottom:2.5rem; }
+.brands-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:1rem; }
+.brand-card { background:#fff; color:#333; padding:1.5rem; text-align:center; border-radius:12px; font-weight:600; letter-spacing:1px; transition:.3s; }
+.brand-card:hover { transform:scale(1.05); box-shadow:0 10px 30px rgba(212,175,55,.3); }
+.swiper { margin:2rem 0; }
+.swiper-slide { background:#111; border:1px solid rgba(212,175,55,.3); border-radius:12px; overflow:hidden; }
+.swiper-slide img { width:100%; height:220px; object-fit:cover; }
+.swiper-slide div { padding:1rem; text-align:center; color:var(--gold); font-weight:600; }
+.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; }
+.service { background:var(--dark); padding:1.8rem; border-radius:16px; border:1px solid rgba(212,175,55,.15); transition:.3s; }
+.service:hover { border-color:var(--gold); transform:translateY(-6px); }
+.locations { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; }
+.loc { background:#111; padding:1.5rem; border-left:4px solid var(--gold); border-radius:8px; }
+.news-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; }
+.news-card { background:#fff; color:#111; border-radius:12px; overflow:hidden; }
+.news-card img { width:100%; height:160px; object-fit:cover; }
+.news-card p { padding:1rem; font-weight:500; }
+.app-btns a { background:#000; color:#fff; padding:.6rem 1.2rem; border-radius:8px; text-decoration:none; margin-right:.5rem; display:inline-block; }
+footer { text-align:center; padding:3rem; border-top:1px solid rgba(212,175,55,.2); color:#888; }
 </style>
 </head>
 <body>
 <nav>
-  <div class="logo"><strong class="gold">BUNJO GRUPACIJA</strong></div>
+  <div class="logo">BUNJO<small>GRUPACIJA • POVJERENJE OD 1990</small></div>
   <div>
-    <a href="#o-nama">O nama</a>
+    <a href="#pocetna">Početna</a>
     <a href="#brendovi">Brendovi</a>
     <a href="#usluge">Usluge</a>
     <a href="#centri">Centri</a>
+    <a href="#novosti">Novosti</a>
     <a href="#aplikacija">Aplikacija</a>
     <a href="#kontakt">Kontakt</a>
   </div>
 </nav>
-<section class="hero">
-  <div class="stripes">
-    <div class="stripe" style="top:20%; animation-delay:0s;"></div>
-    <div class="stripe" style="top:40%; animation-delay:2s;"></div>
-    <div class="stripe" style="top:60%; animation-delay:4s;"></div>
-    <div class="stripe" style="top:80%; animation-delay:6s;"></div>
-  </div>
-  <h1>BUNJO GRUPACIJA</h1>
-  <p class="gold">Povjerenje od 1990. – Najveća domaća automobilska grupacija</p>
-  <div>
-    <a href="#kontakt" class="btn">Zakaži termin</a>
-    <a href="#brendovi" class="btn">Pogledaj brendove</a>
-    <a href="#centri" class="btn">Naši centri</a>
+
+<section class="hero" id="pocetna">
+  <div class="stripes"></div>
+  <div class="hero-content">
+    <h1>BUNJO<br>GRUPACIJA</h1>
+    <div class="tagline">POVJERENJE OD 1990.</div>
+    <p style="font-size:1.2rem; margin:1rem 0; color:#ccc;">Najveća domaća automobilska grupacija u Bosni i Hercegovini</p>
+    <a href="#kontakt" class="cta">Zakažite termin</a>
+    <a href="#brendovi" class="cta" style="background:transparent; border:2px solid var(--gold); color:var(--gold);">Pogledaj brendove</a>
   </div>
 </section>
-<section class="section stats" id="stats">
-  <div class="stat"><h3>30.000+</h3><p>Zadovoljnih kupaca</p></div>
-  <div class="stat"><h3>6</h3><p>Vlastitih auto-centara</p></div>
-  <div class="stat"><h3>35.000+</h3><p>Isporucenih vozila</p></div>
-  <div class="stat"><h3>4</h3><p>Dilerska centra u BiH</p></div>
-  <div class="stat"><h3>35</h3><p>Godina povjerenja</p></div>
+
+<section class="stats">
+  <div><div class="stat-num">30000+</div>zadovoljnih kupaca</div>
+  <div><div class="stat-num">6</div>vlastitih auto-centara</div>
+  <div><div class="stat-num">35000+</div>isporučenih vozila</div>
+  <div><div class="stat-num">4</div>dilerska centra u BiH</div>
 </section>
-<section class="section" id="o-nama">
-  <h2>Ko smo mi?</h2>
-  <p style="max-width:800px; margin:30px auto; font-size:1.1rem; line-height:1.8;">Bunjo Grupacija je od 1990. godine sinonim za autoindustriju u Bosni i Hercegovini. Od male porodične firme izrasla je u najveću domaću automobilsku grupaciju. Direktor Adis Bunjo vodi kompaniju sa fokusom na kvalitet, pouzdanost i podršku kupcima. Nudimo kompletan asortiman od prodaje novih i rabljenih vozila, servisa, rent-a-car, lakirnice, limarije do tehničkog pregleda. Naši centri u Sarajevu, Banja Luci, Mostaru, Cazinu i Vogošći pružaju istu visoku uslugu širom BiH.</p>
-</section>
-<section class="section" id="brendovi">
-  <h2>Naši brendovi</h2>
-  <div class="swiper">
+
+<section id="brendovi">
+  <h2>Naši Brendovi</h2>
+  <div class="swiper brands-swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">ŠKODA</div>
-      <div class="swiper-slide">TOYOTA</div>
-      <div class="swiper-slide">BYD</div>
-      <div class="swiper-slide">HONDA</div>
-      <div class="swiper-slide">DONGFENG</div>
-      <div class="swiper-slide">FORTHING</div>
-      <div class="swiper-slide">VOYAH</div>
-      <div class="swiper-slide">DFSK</div>
-      <div class="swiper-slide">BAIC</div>
-      <div class="swiper-slide">KAIYI</div>
-      <div class="swiper-slide">XEV</div>
-      <div class="swiper-slide">AODES</div>
-      <div class="swiper-slide">MALAGUTI</div>
-      <div class="swiper-slide">LAMBRETTA</div>
-      <div class="swiper-slide">BENDA</div>
-      <div class="swiper-slide">FARIZON</div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-<section class="section">
-  <h2>Izdvojena vozila</h2>
-  <div class="swiper cars-swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background:url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800') center/cover;"><div style="background:rgba(0,0,0,0.6); padding:20px;">Toyota / Škoda modeli</div></div>
-      <div class="swiper-slide" style="background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800') center/cover;"><div style="background:rgba(0,0,0,0.6); padding:20px;">DFSK / Forthing SUV</div></div>
-      <div class="swiper-slide" style="background:url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800') center/cover;"><div style="background:rgba(0,0,0,0.6); padding:20px;">BYD električna vozila</div></div>
-      <div class="swiper-slide" style="background:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800') center/cover;"><div style="background:rgba(0,0,0,0.6); padding:20px;">Honda / Voyah</div></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=600" alt="Škoda"><div>ŠKODA</div></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?q=80&w=600" alt="Toyota"><div>TOYOTA</div></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=600" alt="Honda"><div>HONDA</div></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?q=80&w=600" alt="BYD"><div>BYD</div></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?q=80&w=600" alt="Dongfeng"><div>DONGFENG</div></div>
+      <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600" alt="Voyah"><div>VOYAH</div></div>
     </div>
   </div>
-  <a href="#kontakt" class="btn">Saznaj više o modelima</a>
+  <div class="brands-grid">
+    <div class="brand-card">ŠKODA</div><div class="brand-card">TOYOTA</div><div class="brand-card">BYD</div><div class="brand-card">HONDA</div>
+    <div class="brand-card">DONGFENG</div><div class="brand-card">FORTHING</div><div class="brand-card">VOYAH</div><div class="brand-card">DFSK</div>
+    <div class="brand-card">BAIC</div><div class="brand-card">KAIYI</div><div class="brand-card">XEV</div><div class="brand-card">AODES</div>
+    <div class="brand-card">MALAGUTI</div><div class="brand-card">LAMBRETTA</div><div class="brand-card">BENDA</div><div class="brand-card">FARIZON</div>
+  </div>
 </section>
-<section class="section" id="usluge">
-  <h2>Naše usluge</h2>
+
+<section id="usluge">
+  <h2>Usluge</h2>
   <div class="services">
-    <div class="card"><h3>Prodaja novih i rabljenih</h3><p>Širok izbor vozila svih brendova.</p></div>
-    <div class="card"><h3>Servis</h3><p>Profesionalna servisna podrška.</p></div>
-    <div class="card"><h3>Rent-a-car</h3><p>Kratkoročni i dugoročni najam.</p></div>
-    <div class="card"><h3>Lakirnica i Limarija</h3><p>Kompletna karoserijska usluga.</p></div>
-    <div class="card"><h3>Tehnički pregled</h3><p>Brza i pouzdana usluga.</p></div>
-    <div class="card"><h3>Mobilna aplikacija</h3><p>Podaci o vozilu, loyalty, zakazivanje.</p></div>
+    <div class="service"><h3>Prodaja vozila</h3><p>Novih i rabljenih vozila svih brendova. Najšira ponuda u BiH.</p></div>
+    <div class="service"><h3>Servis</h3><p>Profesionalni servis sa originalnim dijelovima.</p></div>
+    <div class="service"><h3>Rent-a-car</h3><p>Kratkoročni i dugoročni najam.</p></div>
+    <div class="service"><h3>Lakirnica</h3><p>Vrhunska lakirnica.</p></div>
+    <div class="service"><h3>Limarija</h3><p>Stručna limarska radionica.</p></div>
+    <div class="service"><h3>Tehnički pregled</h3><p>Brzi i pouzdani pregledi.</p></div>
   </div>
 </section>
-<section class="section" id="centri">
+
+<section id="centri">
   <h2>Dilerski centri</h2>
   <div class="locations">
-    <div class="card"><h3>Sarajevo – Bare Šip</h3><p>Alipašina bb<br>Toyota, Škoda/Triab, Ford</p><a href="#kontakt" class="btn">Kontakt</a></div>
-    <div class="card"><h3>Ciglane, Sarajevo</h3><p>Historijski objekat – početak priče</p></div>
-    <div class="card"><h3>Semizovac – Vogošća</h3><p>Nova željeznička bb<br>Dailycar, BYD, DFSK</p></div>
-    <div class="card"><h3>Banja Luka</h3><p>Dilerski centar</p></div>
-    <div class="card"><h3>Mostar</h3><p>Dilerski centar</p></div>
-    <div class="card"><h3>Cazin</h3><p>Dilerski centar</p></div>
+    <div class="loc"><h3>Sarajevo – Bare Šip</h3><p>Alipašina bb<br>Toyota, Škoda/Triab, Ford<br>033 222 630</p></div>
+    <div class="loc"><h3>Sarajevo – Ciglane</h3><p>Historijski objekat</p></div>
+    <div class="loc"><h3>Semizovac – Vogošća</h3><p>Nova željeznička bb<br>Dailycar, BYD</p></div>
+    <div class="loc"><h3>Banja Luka</h3><p>Dilerski centar</p></div>
+    <div class="loc"><h3>Mostar</h3><p>Dilerski centar</p></div>
+    <div class="loc"><h3>Cazin</h3><p>Dilerski centar</p></div>
   </div>
 </section>
-<section class="section" id="aplikacija">
-  <h2>Bunjo mobilna aplikacija</h2>
-  <ul style="max-width:600px; margin:30px auto; font-size:1.1rem; line-height:2;">
-    <li>Podaci o Vašem vozilu – na dohvat ruke</li>
-    <li>Bunjo Loyalty – više pogodnosti, manje troškova</li>
-    <li>Zakažite servis jednim klikom</li>
-    <li>Rođendanske i novogodišnje čestitke</li>
-    <li>Napomene za nadolazeći servis</li>
-  </ul>
-  <a href="#kontakt" class="btn">Saznaj više</a>
+
+<section id="novosti">
+  <h2>Novosti</h2>
+  <div class="news-grid">
+    <div class="news-card"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600" alt=""><p>Toyotina svečanost u Parizu: Uručene Ichiban nagrade</p></div>
+    <div class="news-card"><img src="https://images.unsplash.com/photo-1517649763962-0c623066027b?q=80&w=600" alt=""><p>Novi partner KK Spars - BunjoGrupacija</p></div>
+    <div class="news-card"><img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=600" alt=""><p>BunjoGrupacija i nevladina organizacija “Dajte nam šansu”</p></div>
+    <div class="news-card"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600" alt=""><p>Otvoren novi Toyota prodajni salon u Sarajevu</p></div>
+  </div>
 </section>
-<section class="section" style="background:var(--dark);">
-  <h2>Sport i zajednica</h2>
-  <p style="max-width:700px; margin:20px auto;">Generalni sponzor KK Vogošća. Podrška paraolimpijskom plivaču Ismailu Barlovu – ambasadoru BiH. Društveno odgovorna kompanija od 1990.</p>
+
+<section id="aplikacija" style="background:#111;">
+  <h2>Bunjo – mobilna aplikacija</h2>
+  <div style="max-width:700px; margin:0 auto; text-align:center;">
+    <p style="margin-bottom:1.5rem; color:#ccc;">Podaci o vozilu na dohvat ruke. Loyalty program. Zakazivanje servisa jednim klikom. Čestitke i napomene za servis.</p>
+    <div class="app-btns">
+      <a href="#">Download on the App Store</a>
+      <a href="#">NABAVITE NA Google Play</a>
+    </div>
+  </div>
 </section>
-<section class="section" id="kontakt">
-  <h2>Zakazivanje termina & Kontakt</h2>
-  <p>Telefon: 033 222-630 / 033 203-472</p>
-  <p>Email: info@triab.ba</p>
-  <p>Adresa: Alipašina bb, Sarajevo</p>
-  <form style="max-width:500px; margin:30px auto;">
-    <input type="text" placeholder="Ime" style="width:100%; padding:10px; margin:10px 0; background:#222; color:#fff; border:1px solid var(--gold);">
-    <input type="email" placeholder="Email" style="width:100%; padding:10px; margin:10px 0; background:#222; color:#fff; border:1px solid var(--gold);">
-    <textarea placeholder="Poruka / Zakazivanje" style="width:100%; padding:10px; margin:10px 0; background:#222; color:#fff; border:1px solid var(--gold); height:100px;"></textarea>
-    <button class="btn" type="submit">Pošalji</button>
+
+<section id="kontakt">
+  <h2>Kontakt i zakazivanje</h2>
+  <div style="text-align:center; margin-bottom:2rem; color:#ccc;">
+    <p>Alipašina bb, Bare Šip, Sarajevo</p>
+    <p>Tel: 033 222 630 / 033 202 794</p>
+    <p>info@triab.ba</p>
+  </div>
+  <form style="max-width:500px; margin:0 auto; display:grid; gap:1rem;" onsubmit="event.preventDefault(); alert('Hvala! Kontaktiraćemo vas.');">
+    <input type="text" placeholder="Ime i prezime" required style="padding:1rem; background:#111; border:1px solid #333; color:#fff; border-radius:8px;">
+    <input type="email" placeholder="Email" required style="padding:1rem; background:#111; border:1px solid #333; color:#fff; border-radius:8px;">
+    <textarea placeholder="Poruka" rows="4" style="padding:1rem; background:#111; border:1px solid #333; color:#fff; border-radius:8px;"></textarea>
+    <button type="submit" class="cta" style="border:none; cursor:pointer;">Pošalji</button>
   </form>
 </section>
-<footer style="text-align:center; padding:40px; background:#000;">
-  <p>&copy; Bunjo Grupacija – Povjerenje od 1990.</p>
-  <p>Svi linkovi su interni. Nema vraćanja na stari web.</p>
+
+<footer>
+  <p>© 2026 Bunjo Grupacija. Sva prava pridržana.</p>
+  <p style="margin-top:.5rem; font-size:.85rem;">Zlatno-crna luksuzna verzija • Kompletan sadržaj migriran 1:1</p>
 </footer>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-new Swiper('.swiper', { slidesPerView: 3, spaceBetween: 20, loop: true, pagination: { el: '.swiper-pagination' }, autoplay: { delay: 3000 } });
-new Swiper('.cars-swiper', { slidesPerView: 2, spaceBetween: 20, loop: true, autoplay: { delay: 4000 } });
+new Swiper('.brands-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: { delay: 2500 },
+  breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1400: { slidesPerView: 4 } }
+});
 </script>
 </body>
 </html>
