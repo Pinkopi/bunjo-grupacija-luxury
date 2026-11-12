@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bunjo Grupacija | Povjerenje od 1990. – Zlatno-crna luksuzna verzija</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root { --gold: #D4AF37; --black: #0a0a0a; --dark: #111; --white: #fff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--black); color:var(--white); font-family:'Inter',sans-serif; overflow-x:hidden; }
+h1,h2,h3 { font-family:'Playfair Display',serif; }
+.gold { color:var(--gold); }
+.section { padding:80px 5%; }
+.btn { background:var(--gold); color:#000; padding:12px 28px; border:none; cursor:pointer; font-weight:600; text-decoration:none; display:inline-block; margin:10px; transition:0.3s; }
+.btn:hover { background:#fff; }
+.hero { height:100vh; background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920') center/cover; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; position:relative; }
+.hero h1 { font-size:4.5rem; }
+.hero p { font-size:1.5rem; margin:20px 0; }
+.stripes { position:absolute; top:0; left:0; width:100%; height:100%; overflow:hidden; pointer-events:none; }
+.stripe { position:absolute; height:2px; background:linear-gradient(90deg, transparent, var(--gold), transparent); width:100%; animation:slide 12s linear infinite; opacity:0.6; }
+@keyframes slide { 0%{transform:translateX(-100%);} 100%{transform:translateX(100%);} }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:30px; text-align:center; background:var(--dark); }
+.stat h3 { font-size:3rem; color:var(--gold); }
+.swiper { width:100%; padding:40px 0; }
+.swiper-slide { background:var(--dark); height:200px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; border:1px solid var(--gold); }
+.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.card { background:var(--dark); padding:30px; border:1px solid #333; transition:0.3s; }
+.card:hover { border-color:var(--gold); transform:translateY(-5px); }
+.locations { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+nav { position:fixed; top:0; width:100%; background:rgba(10,10,10,0.9); padding:15px 5%; z-index:100; display:flex; justify-content:space-between; align-items:center; }
+nav a { color:var(--white); text-decoration:none; margin:0 15px; }
+nav a:hover { color:var(--gold); }
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><strong class="gold">BUNJO GRUPACIJA</strong></div>
+  <div>
+    <a href="#o-nama">O nama</a>
+    <a href="#brendovi">Brendovi</a>
+    <a href="#usluge">Usluge</a>
+    <a href="#centri">Centri</a>
+    <a href="#aplikacija">Aplikacija</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="stripes">
+    <div class="stripe" style="top:20%; animation-delay:0s;"></div>
+    <div class="stripe" style="top:40%; animation-delay:2s;"></div>
+    <div class="stripe" style="top:60%; animation-delay:4s;"></div>
+    <div class="stripe" style="top:80%; animation-delay:6s;"></div>
+  </div>
+  <h1>BUNJO GRUPACIJA</h1>
+  <p class="gold">Povjerenje od 1990. – Najveća domaća automobilska grupacija</p>
+  <div>
+    <a href="#kontakt" class="btn">Zakaži termin</a>
+    <a href="#brendovi" class="btn">Pogledaj brendove</a>
+    <a href="#centri" class="btn">Naši centri</a>
+  </div>
+</section>
+<section class="section stats" id="stats">
+  <div class="stat"><h3>30.000+</h3><p>Zadovoljnih kupaca</p></div>
+  <div class="stat"><h3>6</h3><p>Vlastitih auto-centara</p></div>
+  <div class="stat"><h3>35.000+</h3><p>Isporucenih vozila</p></div>
+  <div class="stat"><h3>4</h3><p>Dilerska centra u BiH</p></div>
+  <div class="stat"><h3>35</h3><p>Godina povjerenja</p></div>
+</section>
+<section class="section" id="o-nama">
+  <h2>Ko smo mi?</h2>
+  <p style="max-width:800px; margin:30px auto; font-size:1.1rem; line-height:1.8;">Bunjo Grupacija je od 1990. godine sinonim za autoindustriju u Bosni i Hercegovini. Od male porodične firme izrasla je u najveću domaću automobilsku grupaciju. Direktor Adis Bunjo vodi kompaniju sa fokusom na kvalitet, pouzdanost i podršku kupcima. Nudimo kompletan asortiman od prodaje novih i rabljenih vozila, servisa, rent-a-car, lakirnice, limarije do tehničkog pregleda. Naši centri u Sarajevu, Banja Luci, Mostaru, Cazinu i Vogošći pružaju istu visoku uslugu širom BiH.</p>
+</section>
+<section class="section" id="brendovi">
+  <h2>Naši brendovi</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">ŠKODA</div>
+      <div class="swiper-slide">TOYOTA</div>
+      <div class="swiper-slide">BYD</div>
+      <div class="swiper-slide">HONDA</div>
+      <div class="swiper-slide">DONGFENG</div>
+      <div class="swiper-slide">FORTHING</div>
+      <div class="swiper-slide">VOYAH</div>
+      <div class="swiper-slide">DFSK</div>
+      <div class="swiper-slide">BAIC</div>
+      <div class="swiper-slide">KAIYI</div>
+      <div class="swiper-slide">XEV</div>
+      <div class="swiper-slide">AODES</div>
+      <div class="swiper-slide">MALAGUTI</div>
+      <div class="swiper-slide">LAMBRETTA</div>
+      <div class="swiper-slide">BENDA</div>
+      <div class="swiper-slide">FARIZON</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<section class="section">
+  <h2>Izdvojena vozila</h2>
+  <div class="swiper cars-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background:url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800') center/cover;"><div style="background:rgba(0,0,0,0.6); padding:20px;">Toyota / Škoda modeli</div></div>
+      <div class="swiper-slide" style="background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800') center/cover;"><div style="background:rgba(0,0,0,0.6); padding:20px;">DFSK / Forthing SUV</div></div>
+      <div class="swiper-slide" style="background:url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800') center/cover;"><div style="background:rgba(0,0,0,0.6); padding:20px;">BYD električna vozila</div></div>
+      <div class="swiper-slide" style="background:url('https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800') center/cover;"><div style="background:rgba(0,0,0,0.6); padding:20px;">Honda / Voyah</div></div>
+    </div>
+  </div>
+  <a href="#kontakt" class="btn">Saznaj više o modelima</a>
+</section>
+<section class="section" id="usluge">
+  <h2>Naše usluge</h2>
+  <div class="services">
+    <div class="card"><h3>Prodaja novih i rabljenih</h3><p>Širok izbor vozila svih brendova.</p></div>
+    <div class="card"><h3>Servis</h3><p>Profesionalna servisna podrška.</p></div>
+    <div class="card"><h3>Rent-a-car</h3><p>Kratkoročni i dugoročni najam.</p></div>
+    <div class="card"><h3>Lakirnica i Limarija</h3><p>Kompletna karoserijska usluga.</p></div>
+    <div class="card"><h3>Tehnički pregled</h3><p>Brza i pouzdana usluga.</p></div>
+    <div class="card"><h3>Mobilna aplikacija</h3><p>Podaci o vozilu, loyalty, zakazivanje.</p></div>
+  </div>
+</section>
+<section class="section" id="centri">
+  <h2>Dilerski centri</h2>
+  <div class="locations">
+    <div class="card"><h3>Sarajevo – Bare Šip</h3><p>Alipašina bb<br>Toyota, Škoda/Triab, Ford</p><a href="#kontakt" class="btn">Kontakt</a></div>
+    <div class="card"><h3>Ciglane, Sarajevo</h3><p>Historijski objekat – početak priče</p></div>
+    <div class="card"><h3>Semizovac – Vogošća</h3><p>Nova željeznička bb<br>Dailycar, BYD, DFSK</p></div>
+    <div class="card"><h3>Banja Luka</h3><p>Dilerski centar</p></div>
+    <div class="card"><h3>Mostar</h3><p>Dilerski centar</p></div>
+    <div class="card"><h3>Cazin</h3><p>Dilerski centar</p></div>
+  </div>
+</section>
+<section class="section" id="aplikacija">
+  <h2>Bunjo mobilna aplikacija</h2>
+  <ul style="max-width:600px; margin:30px auto; font-size:1.1rem; line-height:2;">
+    <li>Podaci o Vašem vozilu – na dohvat ruke</li>
+    <li>Bunjo Loyalty – više pogodnosti, manje troškova</li>
+    <li>Zakažite servis jednim klikom</li>
+    <li>Rođendanske i novogodišnje čestitke</li>
+    <li>Napomene za nadolazeći servis</li>
+  </ul>
+  <a href="#kontakt" class="btn">Saznaj više</a>
+</section>
+<section class="section" style="background:var(--dark);">
+  <h2>Sport i zajednica</h2>
+  <p style="max-width:700px; margin:20px auto;">Generalni sponzor KK Vogošća. Podrška paraolimpijskom plivaču Ismailu Barlovu – ambasadoru BiH. Društveno odgovorna kompanija od 1990.</p>
+</section>
+<section class="section" id="kontakt">
+  <h2>Zakazivanje termina & Kontakt</h2>
+  <p>Telefon: 033 222-630 / 033 203-472</p>
+  <p>Email: info@triab.ba</p>
+  <p>Adresa: Alipašina bb, Sarajevo</p>
+  <form style="max-width:500px; margin:30px auto;">
+    <input type="text" placeholder="Ime" style="width:100%; padding:10px; margin:10px 0; background:#222; color:#fff; border:1px solid var(--gold);">
+    <input type="email" placeholder="Email" style="width:100%; padding:10px; margin:10px 0; background:#222; color:#fff; border:1px solid var(--gold);">
+    <textarea placeholder="Poruka / Zakazivanje" style="width:100%; padding:10px; margin:10px 0; background:#222; color:#fff; border:1px solid var(--gold); height:100px;"></textarea>
+    <button class="btn" type="submit">Pošalji</button>
+  </form>
+</section>
+<footer style="text-align:center; padding:40px; background:#000;">
+  <p>&copy; Bunjo Grupacija – Povjerenje od 1990.</p>
+  <p>Svi linkovi su interni. Nema vraćanja na stari web.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+new Swiper('.swiper', { slidesPerView: 3, spaceBetween: 20, loop: true, pagination: { el: '.swiper-pagination' }, autoplay: { delay: 3000 } });
+new Swiper('.cars-swiper', { slidesPerView: 2, spaceBetween: 20, loop: true, autoplay: { delay: 4000 } });
+</script>
+</body>
+</html>
